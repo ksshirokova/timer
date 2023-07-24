@@ -13,8 +13,9 @@ const createTimerAnimator = () => {
       minutes = minutes < 10 ? "0" + minutes : minutes;
       second = second < 10 ? "0" + second : second;
       timerEl.innerText = `${hours}:${minutes}:${second}`;
-      seconds--;
+      second >0 && seconds--;
     }, 1000);
+    
   };
 };
 
